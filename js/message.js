@@ -2,8 +2,8 @@
   var model = {
     // 获取数据
     init: function(){
-      var APP_ID = 'WCXkAqM9Urym4UcCqj5mc6bE-gzGzoHsz'
-      var APP_KEY = 'k3XQPIRIBlgVhGSSjyX3Utno'
+      var APP_ID = '5iVlLQAEK9aGxdS1vAM3PIUt-gzGzoHsz';
+      var APP_KEY = 'rJMW38D6TszvfXxKI4ICMywg';
       AV.init({ appId: APP_ID, appKey: APP_KEY })
     },
     fetch: function(){ 
@@ -50,10 +50,10 @@
         } 
       )
     },
-    bindEvents: function(){
-      this.form.addEventListener('submit', function(e){
-        e.preventDefault()
-        this.saveMessage()
+    bindEvents: function () {
+       this.form.addEventListener('submit',  (e) => { // 箭头函数不会犯贱改你的this
+          e.preventDefault()
+          this.saveMessage()
       })
     },
     saveMessage: function(){
